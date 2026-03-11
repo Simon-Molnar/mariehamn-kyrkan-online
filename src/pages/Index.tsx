@@ -39,8 +39,12 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center justify-center bg-gradient-to-br from-secondary via-background to-secondary/50">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNjNWEzNTUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djJoLTJ2LTJoMnptMC00di0yaDJ2Mmgtmm0tNCAwaC0ydjJoMnYtMnptMC00di0yaDJ2Mmgtmm0tNCAwaC0ydjJoMnYtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
             <Heart className="h-8 w-8 text-primary" />
