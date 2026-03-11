@@ -4,7 +4,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Layout } from "@/components/Layout";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Church, BookOpen, Users, Heart, CalendarDays, ArrowRight } from "lucide-react";
+import { Church, BookOpen, Users, CalendarDays } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { sv } from "date-fns/locale";
 import heroImage from "@/assets/hero-church.jpg";
