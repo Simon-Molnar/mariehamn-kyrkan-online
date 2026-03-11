@@ -49,11 +49,11 @@ export default function Index() {
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
             <Heart className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Mariehamns katolska församling
           </h1>
           <p className="mb-2 text-lg text-primary font-medium">S:t Görans kyrka</p>
-          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
+          <p className="mx-auto mb-8 max-w-xl text-white/80">
             Välkommen till den katolska gemenskapen på Åland. Vi firar mässa, delar tron och 
             bygger gemenskap i Kristi kärlek.
           </p>
