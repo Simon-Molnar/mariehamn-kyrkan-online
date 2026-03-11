@@ -7,6 +7,9 @@ import { Button } from "@/components/ui/button";
 import { Church, BookOpen, Users, Heart, CalendarDays, ArrowRight } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { sv } from "date-fns/locale";
+import heroImage from "@/assets/hero-church.jpg";
+import { format, parseISO } from "date-fns";
+import { sv } from "date-fns/locale";
 
 const quickLinks = [
   { to: "/gudstjanster", label: "Gudstjänster", icon: CalendarDays, desc: "Se kommande mässor och andakter" },
