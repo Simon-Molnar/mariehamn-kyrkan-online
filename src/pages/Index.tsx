@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Church, BookOpen, Users, Heart, CalendarDays, ArrowRight } from "lucide-react";
 import { format, parseISO } from "date-fns";
 import { sv } from "date-fns/locale";
+import heroImage from "@/assets/hero-church.jpg";
 
 const quickLinks = [
   { to: "/gudstjanster", label: "Gudstjänster", icon: CalendarDays, desc: "Se kommande mässor och andakter" },
@@ -36,17 +37,21 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero */}
-      <section className="relative flex min-h-[60vh] items-center justify-center bg-gradient-to-br from-secondary via-background to-secondary/50">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNjNWEzNTUiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0djJoLTJ2LTJoMnptMC00di0yaDJ2Mmgtmm0tNCAwaC0ydjJoMnYtMnptMC00di0yaDJ2Mmgtmm0tNCAwaC0ydjJoMnYtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-50" />
+      <section className="relative flex min-h-[60vh] items-center justify-center overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url(${heroImage})` }}
+        />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
           <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-primary/10">
             <Heart className="h-8 w-8 text-primary" />
           </div>
-          <h1 className="mb-4 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+          <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Mariehamns katolska församling
           </h1>
           <p className="mb-2 text-lg text-primary font-medium">S:t Görans kyrka</p>
-          <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
+          <p className="mx-auto mb-8 max-w-xl text-white/80">
             Välkommen till den katolska gemenskapen på Åland. Vi firar mässa, delar tron och 
             bygger gemenskap i Kristi kärlek.
           </p>

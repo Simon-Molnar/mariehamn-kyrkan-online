@@ -8,6 +8,7 @@ const navLinks = [
   { to: "/gudstjanster", label: "Gudstjänster" },
   { to: "/sakrament", label: "Sakrament" },
   { to: "/verksamhet", label: "Verksamhet" },
+  { to: "/butik", label: "Butik" },
   { to: "/nyheter", label: "Nyheter" },
   { to: "/bli-katolik", label: "Bli katolik" },
   { to: "/om-oss", label: "Om oss" },
