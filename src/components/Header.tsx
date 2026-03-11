@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -17,10 +17,43 @@ const navLinks = [
 
 export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [visible, setVisible] = useState(false);
   const location = useLocation();
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const y = window.scrollY;
+      if (y > 50) {
+        setVisible(true);
+      } else if (y === 0) {
+        setVisible(false);
+      }
+      lastScrollY.current = y;
+    };
+
+    const handleMouse = (e: MouseEvent) => {
+      if (e.clientY <= 60) {
+        setVisible(true);
+      } else if (window.scrollY === 0) {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("mousemove", handleMouse, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouse);
+    };
+  }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-transform duration-300 ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link to="/" className="flex flex-col leading-tight" onClick={() => setMobileOpen(false)}>
           <span className="font-[Playfair_Display] text-lg font-bold tracking-tight text-foreground">
