@@ -81,7 +81,7 @@ export default function Kontakt() {
           <div className="mt-8 overflow-hidden rounded-lg border">
             <iframe
               title="S:t Görans kyrka, Mariehamn"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1897.5!2d19.9348!3d60.0969!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x468ae6e5a3c5a6f7%3A0x1234567890abcdef!2s%C3%96stra+Esplanadgatan+6%2C+22100+Mariehamn!5e0!3m2!1ssv!2sfi!4v1"
+              src="https://maps.google.com/maps?q=60.0969,19.9348&t=&z=16&ie=UTF8&iwloc=&output=embed"
               width="100%"
               height="350"
               style={{ border: 0 }}
