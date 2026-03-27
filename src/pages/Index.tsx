@@ -44,9 +44,6 @@ export default function Index() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 mx-auto max-w-3xl px-4 text-center">
-          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-white/20">
-            <Heart className="h-8 w-8 text-primary" />
-          </div>
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Mariehamns katolska församling
           </h1>
