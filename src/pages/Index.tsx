@@ -50,7 +50,7 @@ export default function Index() {
           <h1 className="mb-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
             Mariehamns katolska församling
           </h1>
-          <p className="mb-2 text-lg text-primary font-medium">S:t Görans kyrka</p>
+          
           <p className="mx-auto mb-8 max-w-xl text-white/80">
             Välkommen till den katolska gemenskapen på Åland. Vi firar mässa, delar tron och 
             bygger gemenskap i Kristi kärlek.
